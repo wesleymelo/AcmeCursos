@@ -1,0 +1,14 @@
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\AcmeCursos.Service.dll.config
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\AcmeCursos.Service.dll
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\AcmeCursos.Service.pdb
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\AutoMapper.dll
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\EntityFramework.dll
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\AutoMapper.xml
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\EntityFramework.xml
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\obj\Release\AcmeCursos.Service.csprojResolveAssemblyReference.cache
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\obj\Release\AcmeCursos.Service.dll
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\obj\Release\AcmeCursos.Service.pdb
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\EntityFramework.SqlServer.dll
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\bin\EntityFramework.SqlServer.xml
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\obj\Release\AcmeCursos.Service.csproj.GenerateResource.Cache
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Service\obj\Release\AcmeCursos.Service.Migrations.Fist.resources

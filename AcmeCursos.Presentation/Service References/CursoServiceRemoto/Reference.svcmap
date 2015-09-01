@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cc664683-aa76-4b0a-9f68-7c12615a1f53" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CursoService.disco" MetadataType="Disco" ID="d1aab739-84c4-4109-9628-d8ab81779e90" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?disco" />
+    <MetadataFile FileName="CursoService.xsd" MetadataType="Schema" ID="b528ac2b-943a-4492-9c3b-cebe6c8fd50e" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CursoService1.xsd" MetadataType="Schema" ID="0a9cbfc8-3bee-47d5-9573-1b97aeb75426" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CursoService2.xsd" MetadataType="Schema" ID="c9fe23e9-aa65-408f-bea3-f50391cd1edf" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CursoService3.xsd" MetadataType="Schema" ID="e8bfe80f-0245-4229-bd12-e2a08780ec92" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CursoService.wsdl" MetadataType="Wsdl" ID="99668a4f-e13b-44b1-8640-88af1eec606e" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

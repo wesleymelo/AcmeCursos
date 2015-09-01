@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EstudanteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://acmecursosservicewesley.azurewebsites.net/EstudanteService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://acmecursosservicewesley.azurewebsites.net/EstudanteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://acmecursosservicewesley.azurewebsites.net/EstudanteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AcmeCursos.Service.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEstudanteService_GetAllEstudantes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEstudantes" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_GetAllEstudantes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEstudantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_GetAllEstudantesWithInscricoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEstudantesWithInscricoes" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_GetAllEstudantesWithInscricoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEstudantesWithInscricoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_FindEstudante_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindEstudante" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_FindEstudante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindEstudanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_FindWithInscricoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindWithInscricoes" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_FindWithInscricoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindWithInscricoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_DeleteEstudante_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEstudante" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_DeleteEstudante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEstudanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_AddEstudante_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEstudante" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_AddEstudante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEstudanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_UpdateEstudante_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstudante" />
+  </wsdl:message>
+  <wsdl:message name="IEstudanteService_UpdateEstudante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstudanteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEstudanteService">
+    <wsdl:operation name="GetAllEstudantes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstudanteService/GetAllEstudantes" message="tns:IEstudanteService_GetAllEstudantes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstudanteService/GetAllEstudantesResponse" message="tns:IEstudanteService_GetAllEstudantes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEstudantesWithInscricoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstudanteService/GetAllEstudantesWithInscricoes" message="tns:IEstudanteService_GetAllEstudantesWithInscricoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstudanteService/GetAllEstudantesWithInscricoesResponse" message="tns:IEstudanteService_GetAllEstudantesWithInscricoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindEstudante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstudanteService/FindEstudante" message="tns:IEstudanteService_FindEstudante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstudanteService/FindEstudanteResponse" message="tns:IEstudanteService_FindEstudante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindWithInscricoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstudanteService/FindWithInscricoes" message="tns:IEstudanteService_FindWithInscricoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstudanteService/FindWithInscricoesResponse" message="tns:IEstudanteService_FindWithInscricoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEstudante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstudanteService/DeleteEstudante" message="tns:IEstudanteService_DeleteEstudante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstudanteService/DeleteEstudanteResponse" message="tns:IEstudanteService_DeleteEstudante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEstudante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstudanteService/AddEstudante" message="tns:IEstudanteService_AddEstudante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstudanteService/AddEstudanteResponse" message="tns:IEstudanteService_AddEstudante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstudante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstudanteService/UpdateEstudante" message="tns:IEstudanteService_UpdateEstudante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstudanteService/UpdateEstudanteResponse" message="tns:IEstudanteService_UpdateEstudante_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEstudanteService" type="tns:IEstudanteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllEstudantes">
+      <soap:operation soapAction="http://tempuri.org/IEstudanteService/GetAllEstudantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEstudantesWithInscricoes">
+      <soap:operation soapAction="http://tempuri.org/IEstudanteService/GetAllEstudantesWithInscricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEstudante">
+      <soap:operation soapAction="http://tempuri.org/IEstudanteService/FindEstudante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindWithInscricoes">
+      <soap:operation soapAction="http://tempuri.org/IEstudanteService/FindWithInscricoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEstudante">
+      <soap:operation soapAction="http://tempuri.org/IEstudanteService/DeleteEstudante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEstudante">
+      <soap:operation soapAction="http://tempuri.org/IEstudanteService/AddEstudante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstudante">
+      <soap:operation soapAction="http://tempuri.org/IEstudanteService/UpdateEstudante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EstudanteService">
+    <wsdl:port name="BasicHttpBinding_IEstudanteService" binding="tns:BasicHttpBinding_IEstudanteService">
+      <soap:address location="http://acmecursosservicewesley.azurewebsites.net/EstudanteService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

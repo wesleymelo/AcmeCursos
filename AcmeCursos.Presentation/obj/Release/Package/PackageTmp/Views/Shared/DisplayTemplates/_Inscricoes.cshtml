@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AcmeCursos.Models.Inscricao>
+
+<div class="table-responsive">
+    <table class="table table-condensed table-hover table-striped">
+        <thead>
+            <tr>
+                <th class="text-center"><small>#</small></th>
+                <th><small>Curso</small></th>
+                <th><small>Data Inscrição</small></th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var inscricao in Model)
+            {
+                <tr>
+                    <td class="text-center"><small>@inscricao.Id</small></td>
+                    <td><small>@inscricao.Curso.Nome</small></td>
+                    <td><small>@inscricao.DataInscricao</small></td>
+                    <th> </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

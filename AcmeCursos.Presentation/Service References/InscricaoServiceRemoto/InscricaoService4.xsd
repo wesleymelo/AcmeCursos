@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AcmeCursos.Service.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AcmeCursos.Service.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="InscricaoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Curso" nillable="true" type="tns:CursoDTO" />
+      <xs:element minOccurs="0" name="CursoId" type="xs:int" />
+      <xs:element minOccurs="0" name="DataInscricao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Estudante" nillable="true" type="tns:EstudanteDTO" />
+      <xs:element minOccurs="0" name="EstudanteId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InscricaoDTO" nillable="true" type="tns:InscricaoDTO" />
+  <xs:complexType name="CursoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataLimiteInscricao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Professores" nillable="true" type="tns:ArrayOfProfessorDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CursoDTO" nillable="true" type="tns:CursoDTO" />
+  <xs:complexType name="ArrayOfProfessorDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfessorDTO" nillable="true" type="tns:ProfessorDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfessorDTO" nillable="true" type="tns:ArrayOfProfessorDTO" />
+  <xs:complexType name="ProfessorDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cursos" nillable="true" type="tns:ArrayOfCursoDTO" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sobrenome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titulacao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfessorDTO" nillable="true" type="tns:ProfessorDTO" />
+  <xs:complexType name="ArrayOfCursoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CursoDTO" nillable="true" type="tns:CursoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCursoDTO" nillable="true" type="tns:ArrayOfCursoDTO" />
+  <xs:complexType name="EstudanteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataMatricula" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Inscricoes" nillable="true" type="tns:ArrayOfInscricaoDTO" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SobreNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstudanteDTO" nillable="true" type="tns:EstudanteDTO" />
+  <xs:complexType name="ArrayOfInscricaoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InscricaoDTO" nillable="true" type="tns:InscricaoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInscricaoDTO" nillable="true" type="tns:ArrayOfInscricaoDTO" />
+</xs:schema>

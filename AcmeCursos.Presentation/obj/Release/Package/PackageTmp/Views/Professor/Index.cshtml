@@ -1,0 +1,69 @@
+﻿@model IList<AcmeCursos.Models.Professor>
+@using AcmeCursos.Models;
+@{
+    ViewBag.Title = "Professores";
+}
+
+@if (TempData["Mensagem"] != null)
+{
+    <p class="alert alert-success">@TempData["Mensagem"]</p>
+}
+
+<h2>Professores</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.ActionLink("Novo", "Create", "Professor", null, new { @class = "btn btn-success pull-left", role = "button" })
+    </div>
+</div>
+
+<div></div>
+
+<div class="row">
+    <div class="col-md-12">
+        @if (Model != null && Model.Count > 0)
+        {
+            <div class="table table-responsive">
+                <table class="table table-striped table-hover table-condensed">
+                    <thead>
+                        <tr>
+                            <th class="text-center"><small>#</small></th>
+                            <th><small>Nome</small></th>
+                            <th><small>Sobrenome</small></th>
+                            <th><small>Titula&ccedil;&aacute;o</small></th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (Professor professor in Model)
+                        {
+                            <tr>
+                                <td class="text-center"><small>@professor.Id</small></td>
+                                <td><small>@professor.Nome</small></td>
+                                <td><small>@professor.Sobrenome</small></td>
+                                <td><small>@professor.Titulacao</small></td>
+                                <td>
+                                    <div class="pull-right">
+                                        @Html.ActionLink(" ", "Details", "Professor", new { id = professor.Id }, new { @class = "glyphicon glyphicon-search", title = "Detalhar" })&nbsp;&nbsp;
+                                        @Html.ActionLink(" ", "Edit", "Professor", new { id = professor.Id }, new { @class = "glyphicon glyphicon-pencil", title = "Editar" })&nbsp;&nbsp;
+                                        @Html.ActionLink(" ", "Delete", "Professor", new { id = professor.Id }, new { @class = "glyphicon glyphicon-remove", title = "Excluir" })
+                                    </div>
+                                </td>
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <br/>
+
+            <p class="alert alert-info">Não existem professores cadastrados.</p>
+        }
+    </div>
+
+</div>

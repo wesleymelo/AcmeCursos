@@ -1,0 +1,52 @@
+﻿@model AcmeCursos.Models.Curso
+
+@{
+    ViewBag.Title = "Exclusão";
+}
+
+<h2>Exclusão</h2>
+
+<h3>Deseja realmente excluir?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataLimiteInscricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataLimiteInscricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-left">
+                    <input type="submit" value="Excluir" class="btn btn-success" />
+                    @Html.ActionLink("Voltar", "Index", "Curso", null, new { @class = "btn btn-default", role = "button" })
+                </div>
+            </div>
+        </div>
+    }
+</div>

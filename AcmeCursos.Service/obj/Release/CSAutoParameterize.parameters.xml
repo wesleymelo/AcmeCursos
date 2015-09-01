@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="AcmeCursosConnection-Web.config Connection String" description="AcmeCursosConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:f9sfsyndwi.database.windows.net,1433;Initial Catalog=acmecursos;User Id=wesley@f9sfsyndwi;Password=a1017049A;multipleactiveresultsets=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Wesley\\documents\\visual\ studio\ 2013\\Projects\\AcmeCursos\\AcmeCursos\.Service\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AcmeCursosConnection']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AcmeCursos.Models.Professor>
+
+<div class="table-responsive">
+    <table class="table table-condensed table-hover table-striped">
+        <thead>
+            <tr>
+                <th class="text-center"><small>#</small></th>
+                <th><small>Nome</small></th>
+                <th><small>SobreNome</small></th>
+                <th><small>Titulação</small></th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var professor in Model)
+            {
+                <tr>
+                    <td class="text-center"><small>@professor.Id</small></td>
+                    <td><small>@professor.Nome</small></td>
+                    <td><small>@professor.Sobrenome</small></td>
+                    <td><small>@professor.Titulacao</small></td>
+                    <th> </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

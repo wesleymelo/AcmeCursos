@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="acmecursosserviceswesley" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Wesley\\documents\\visual\ studio\ 2013\\Projects\\AcmeCursos\\AcmeCursos\.Service\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Wesley\\documents\\visual\ studio\ 2013\\Projects\\AcmeCursos\\AcmeCursos\.Service\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="AcmeCursosConnection-Web.config Connection String" description="" value="Data Source=tcp:ffd79rjglm.database.windows.net,1433;Initial Catalog=acmecurAsnmVhwR0;User ID=wesley@ffd79rjglm;Password=a1017049A" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Wesley\\documents\\visual\ studio\ 2013\\Projects\\AcmeCursos\\AcmeCursos\.Service\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AcmeCursosConnection']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="00b839dc-1d53-41ee-9b50-31a76baacd95" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://acmecursosservicewesley.azurewebsites.net/InscricaoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InscricaoService4.xsd" MetadataType="Schema" ID="60415d55-e5f2-4f0a-83c1-bb89c98ce76f" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/InscricaoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InscricaoService41.xsd" MetadataType="Schema" ID="48efbc5b-1306-4aa2-bbb1-257ec751d6ce" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/InscricaoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="InscricaoService42.xsd" MetadataType="Schema" ID="aa53a31d-2b0c-43df-b2f3-95a3afd58efa" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/InscricaoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InscricaoService43.xsd" MetadataType="Schema" ID="c6acf4a7-fb74-42e4-a2db-3578213cae03" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/InscricaoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InscricaoService1.disco" MetadataType="Disco" ID="3e19e8f2-48b2-46dc-926d-d3db794804bc" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/InscricaoService.svc?disco" />
+    <MetadataFile FileName="InscricaoService1.wsdl" MetadataType="Wsdl" ID="f748c4e9-84b8-4561-af31-e732d5a9c665" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/InscricaoService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
