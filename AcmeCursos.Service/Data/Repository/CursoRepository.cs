@@ -37,7 +37,8 @@ namespace AcmeCursos.Service.Data.Repository
             {
                 using (AppDBContext Context = new AppDBContext())
                 {
-                    Context.Cursos.Remove(curso);
+                    Curso cursoTemp = Context.Cursos.FirstOrDefault(c => c.Id == curso.Id);
+                    Context.Cursos.Remove(cursoTemp);
                     Context.SaveChanges();
                 }
             }
@@ -74,7 +75,15 @@ namespace AcmeCursos.Service.Data.Repository
         {
             using (AppDBContext Context = new AppDBContext())
             {
-                Context.Entry(curso).State = EntityState.Modified;
+                List<Professor> professores = new List<Professor>();
+                
+                foreach (Professor p in curso.Professores)
+                {
+                    professores.Add(Context.Professores.FirstOrDefault(x => x.Id == p.Id));
+                }
+
+                curso = Context.Cursos.Include(x => x.Professores).FirstOrDefault(c => c.Id == curso.Id);
+                curso.Professores = professores;
                 Context.SaveChanges();
             }
 

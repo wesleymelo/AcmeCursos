@@ -26,7 +26,7 @@ namespace AcmeCursos.Models
         [Required]
         [Display(Name = "Data Limite para inscrição")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DataLimiteInscricao { get; set; }
 
         [Display(Name = "Cursos")]

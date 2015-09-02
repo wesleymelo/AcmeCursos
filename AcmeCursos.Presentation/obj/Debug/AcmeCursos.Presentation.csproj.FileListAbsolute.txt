@@ -1,3 +1,4 @@
+C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\System.Web.Optimization.dll
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\AcmeCursos.Presentation.dll.config
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\AcmeCursos.Presentation.dll
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\AcmeCursos.Presentation.pdb
@@ -25,7 +26,6 @@ C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Pres
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\System.Web.Http.dll
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\System.Web.Http.WebHost.dll
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\System.Web.Mvc.dll
-C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\System.Web.Optimization.dll
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\System.Web.Razor.dll
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\System.Web.WebPages.dll
@@ -58,6 +58,5 @@ C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Pres
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\obj\Debug\AcmeCursos.Presentation.csprojResolveAssemblyReference.cache
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\obj\Debug\AcmeCursos.Presentation.dll
 C:\Users\Wesley\documents\visual studio 2013\Projects\AcmeCursos\AcmeCursos.Presentation\obj\Debug\AcmeCursos.Presentation.pdb

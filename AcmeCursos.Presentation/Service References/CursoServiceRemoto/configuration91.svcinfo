@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="YQbssGeJlZlJF4ceBX+Ujkmt4fw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="sD9179ZeZHXkophcKX4jtTdFED0=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ICursoService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ICursoService" contract="CursoServiceRemoto.ICursoService" bindingType="basicHttpBinding" address="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc" bindingConfiguration="BasicHttpBinding_ICursoService">
+    <endpoint name="BasicHttpBinding_ICursoService" contract="CursoServiceRemoto.ICursoService" bindingType="basicHttpBinding" address="http://localhost:53509/CursoService.svc" bindingConfiguration="BasicHttpBinding_ICursoService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://acmecursosservicewesley.azurewebsites.net/CursoService.svc</serializedValue>
+          <serializedValue>http://localhost:53509/CursoService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

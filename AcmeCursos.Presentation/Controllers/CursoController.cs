@@ -54,7 +54,7 @@ namespace AcmeCursos.Presentation.Controllers
         {
             ProfessorServiceRemote.ProfessorServiceClient cliente = new ProfessorServiceRemote.ProfessorServiceClient();
             var professores = Mapper.Map<List<Professor>>(cliente.GetAll());
-            ViewBag.ProfessorSelectList = new MultiSelectList(professores, "Id", "NomeCompleto", professoresId);
+            ViewBag.ProfessorSelectList = new MultiSelectList(professores, "Id", "NomeCompleto", professoresId.ToList());
         }
 
         [HttpPost]
@@ -89,7 +89,9 @@ namespace AcmeCursos.Presentation.Controllers
 
                     return RedirectToAction("Index");
 
-                }catch(Exception e){
+                }
+                catch (Exception e)
+                {
                     ViewBag.Mensagem = e.Message;
                     CriaMultiSelectListProfessores(curso.ProfessoresId);
                     return View("Create", curso);
@@ -103,6 +105,7 @@ namespace AcmeCursos.Presentation.Controllers
         public ActionResult Edit(int id)
         {
             CursoServiceRemoto.CursoServiceClient cliente = new CursoServiceRemoto.CursoServiceClient();
+            ProfessorServiceRemote.ProfessorServiceClient professorWS = new ProfessorServiceRemote.ProfessorServiceClient();
 
             Curso curso = Mapper.Map<CursoDTO, Curso>(cliente.Find(id));
 
@@ -110,6 +113,16 @@ namespace AcmeCursos.Presentation.Controllers
             {
                 return HttpNotFound();
             }
+
+            curso.Professores = Mapper.Map<List<Professor>>(professorWS.GetAllByCurso(curso.Id));
+            curso.ProfessoresId = new int[curso.Professores.Count];
+
+            for (int i = 0; i < curso.Professores.Count; i++)
+            {
+                curso.ProfessoresId[i] = curso.Professores.ElementAt(i).Id;
+            }
+
+            CriaMultiSelectListProfessores(curso.ProfessoresId);
 
             return View(curso);
         }
@@ -121,8 +134,24 @@ namespace AcmeCursos.Presentation.Controllers
             if (ModelState.IsValid)
             {
                 CursoServiceRemoto.CursoServiceClient cliente = new CursoServiceRemoto.CursoServiceClient();
+                ProfessorServiceRemote.ProfessorServiceClient clienteProfessor = new ProfessorServiceRemote.ProfessorServiceClient();
 
-                bool retorno = cliente.Update(Mapper.Map<Curso, CursoDTO>(curso));
+                List<Professor> professores = new List<Professor>();
+                curso.Professores = new List<Professor>();
+
+                Professor professor;
+                for (int i = 0; i < curso.ProfessoresId.Length; i++)
+                {
+                    professor = Mapper.Map<AcmeCursos.Presentation.ProfessorServiceRemote.ProfessorDTO, Professor>(clienteProfessor.Find(curso.ProfessoresId[i]));
+
+                    professores.Add(professor);
+                }
+
+                CursoDTO cursoDTO = Mapper.Map<Curso, CursoDTO>(curso);
+
+                cursoDTO.Professores = Mapper.Map<List<ProfessorDTO>>(professores);
+
+                bool retorno = cliente.Update(cursoDTO);
 
                 TempData["Sucesso"] = true;
                 TempData["Mensagem"] = retorno ? "Curso atualizado com sucesso" : "Curso não pode ser atualizado";
@@ -151,18 +180,15 @@ namespace AcmeCursos.Presentation.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(Curso curso)
         {
-            if (ModelState.IsValid)
-            {
-                CursoServiceRemoto.CursoServiceClient cliente = new CursoServiceRemoto.CursoServiceClient();
+            CursoServiceRemoto.CursoServiceClient cursoWS = new CursoServiceRemoto.CursoServiceClient();
+            curso = Mapper.Map<CursoDTO, Curso>(cursoWS.Find(curso.Id));
+            CursoServiceRemoto.CursoServiceClient cliente = new CursoServiceRemoto.CursoServiceClient();
 
-                bool retorno = cliente.Delete(Mapper.Map<Curso, CursoDTO>(curso));
+            bool retorno = cliente.Delete(Mapper.Map<Curso, CursoDTO>(curso));
 
-                TempData["Mensagem"] = retorno ? "Curso excluído com sucesso" : "Curso não pode ser excluído";
+            TempData["Mensagem"] = retorno ? "Curso excluído com sucesso" : "Curso não pode ser excluído";
 
-                return RedirectToAction("Index");
-            }
-
-            return View("Delete", curso);
+            return RedirectToAction("Index");
         }
     }
 }
