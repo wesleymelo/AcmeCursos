@@ -39,22 +39,22 @@ namespace AcmeCursos.Presentation.Controllers
 
         public ActionResult Create()
         {
-            CriaMultiSelectListProfessores();
+            ViewBag.ProfessorSelectList = CriaMultiSelectListProfessores();
             return View();
         }
 
-        private void CriaMultiSelectListProfessores()
+        private MultiSelectList CriaMultiSelectListProfessores()
         {
             ProfessorServiceRemote.ProfessorServiceClient cliente = new ProfessorServiceRemote.ProfessorServiceClient();
             var professores = Mapper.Map<List<Professor>>(cliente.GetAll());
-            ViewBag.ProfessorSelectList = new MultiSelectList(professores, "Id", "NomeCompleto");
+            return new MultiSelectList(professores, "Id", "NomeCompleto");
         }
 
-        private void CriaMultiSelectListProfessores(int[] professoresId)
+        private MultiSelectList CriaMultiSelectListProfessores(List<int> professoresId)
         {
             ProfessorServiceRemote.ProfessorServiceClient cliente = new ProfessorServiceRemote.ProfessorServiceClient();
             var professores = Mapper.Map<List<Professor>>(cliente.GetAll());
-            ViewBag.ProfessorSelectList = new MultiSelectList(professores, "Id", "NomeCompleto", professoresId.ToList());
+            return new MultiSelectList(professores, "Id", "NomeCompleto", professoresId);
         }
 
         [HttpPost]
@@ -93,7 +93,10 @@ namespace AcmeCursos.Presentation.Controllers
                 catch (Exception e)
                 {
                     ViewBag.Mensagem = e.Message;
-                    CriaMultiSelectListProfessores(curso.ProfessoresId);
+
+                    List<int> professoresId = new List<int>();
+                    curso.ProfessoresId.ToList().ForEach(p => professoresId.Add(p));
+                    ViewBag.ProfessorSelectList = CriaMultiSelectListProfessores(professoresId);
                     return View("Create", curso);
                 }
 
@@ -115,14 +118,11 @@ namespace AcmeCursos.Presentation.Controllers
             }
 
             curso.Professores = Mapper.Map<List<Professor>>(professorWS.GetAllByCurso(curso.Id));
-            curso.ProfessoresId = new int[curso.Professores.Count];
 
-            for (int i = 0; i < curso.Professores.Count; i++)
-            {
-                curso.ProfessoresId[i] = curso.Professores.ElementAt(i).Id;
-            }
+            List<int> professoreSelected = new List<int>();
+            (new List<Professor>(curso.Professores)).ForEach(p => professoreSelected.Add(p.Id));
 
-            CriaMultiSelectListProfessores(curso.ProfessoresId);
+            ViewBag.ProfessorSelectList = CriaMultiSelectListProfessores(professoreSelected);
 
             return View(curso);
         }

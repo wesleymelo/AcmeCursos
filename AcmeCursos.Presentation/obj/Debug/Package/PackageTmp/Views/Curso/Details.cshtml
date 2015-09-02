@@ -1,0 +1,72 @@
+﻿@model AcmeCursos.Models.Curso
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+@if(Model != null){
+    
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataLimiteInscricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataLimiteInscricao)
+        </dd>
+
+    </dl>
+
+    <div class="row">
+        <div class="col-md-12">
+            @if (Model.Professores != null && Model.Professores.Count > 0)
+            {
+                @Html.DisplayFor(model => model.Professores)
+            }
+            else
+            {
+                <p class="alert alert-info"> Curso sem nenhum professor.</p>
+            }
+
+        </div>
+    </div>
+
+
+</div>
+
+}
+else
+{
+    <p class="alert alert-info">Curso não cadastrado.</p>
+}    
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <div class="pull-left">
+            @Html.ActionLink("Editar", "Edit", "Curso", new { id = Model.Id }, new { @class = "btn btn-success ", role = "button" }) &nbsp;&nbsp;
+            @Html.ActionLink("Voltar", "Index", "Curso", null, new { @class = "btn btn-default", role = "button" })
+        </div>
+    </div>
+</div>
+

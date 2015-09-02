@@ -6,6 +6,7 @@
 
 @if (ViewBag.Mensagem != null)
 {
+    <br/>
     <p class="alert alert-danger">@ViewBag.Mensagem</p>
 }
 
@@ -45,10 +46,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ProfessoresId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ProfessoresId", (MultiSelectList)ViewBag.ProfessorSelectList, new { multiple = "multiple" })
+                @Html.DropDownList("ProfessoresId", (MultiSelectList)ViewBag.ProfessorSelectList, new { multiple = "multiple", size = 6 })
                 @Html.ValidationMessageFor(model => model.ProfessoresId, "", new { @class = "text-danger" })
             </div>
         </div>
+
     </div>
 
     <br />

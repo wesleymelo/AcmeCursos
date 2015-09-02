@@ -21,15 +21,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:53509/CursoService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursoService.xsd" MetadataType="Schema" ID="212de0c7-a69a-4298-b604-6479cc9fabfe" SourceId="1" SourceUrl="http://localhost:53509/CursoService.svc?xsd=xsd1" />
-    <MetadataFile FileName="CursoService1.xsd" MetadataType="Schema" ID="a2ebaa4f-8f9e-4a5c-9a76-2db6d691e6ef" SourceId="1" SourceUrl="http://localhost:53509/CursoService.svc?xsd=xsd3" />
-    <MetadataFile FileName="CursoService.disco" MetadataType="Disco" ID="582046d1-9845-43bf-b514-9ea162871403" SourceId="1" SourceUrl="http://localhost:53509/CursoService.svc?disco" />
-    <MetadataFile FileName="CursoService2.xsd" MetadataType="Schema" ID="a2c12846-dbc1-4592-ac12-975ae65b96b1" SourceId="1" SourceUrl="http://localhost:53509/CursoService.svc?xsd=xsd0" />
-    <MetadataFile FileName="CursoService.wsdl" MetadataType="Wsdl" ID="590663f4-5004-47aa-8372-de2d9524ddb2" SourceId="1" SourceUrl="http://localhost:53509/CursoService.svc?wsdl" />
-    <MetadataFile FileName="CursoService3.xsd" MetadataType="Schema" ID="1c8237d2-8491-4050-be78-aac7ae0b1960" SourceId="1" SourceUrl="http://localhost:53509/CursoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CursoService1.disco" MetadataType="Disco" ID="e91e5ed8-5873-42b2-8e8e-f35f7720af51" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?disco" />
+    <MetadataFile FileName="CursoService4.xsd" MetadataType="Schema" ID="f235caf3-97da-4238-be23-93def09b62e4" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CursoService41.xsd" MetadataType="Schema" ID="1f2dee48-729e-47eb-9db7-c8dc84db5573" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CursoService42.xsd" MetadataType="Schema" ID="6cceeee4-9c95-4e5c-9f5c-47c225849268" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CursoService43.xsd" MetadataType="Schema" ID="bacdaf6c-2370-4e13-bc83-5e6d19a5c174" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CursoService1.wsdl" MetadataType="Wsdl" ID="bd20e945-04e7-43a0-88c8-cef363105e17" SourceId="1" SourceUrl="http://acmecursosservicewesley.azurewebsites.net/CursoService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

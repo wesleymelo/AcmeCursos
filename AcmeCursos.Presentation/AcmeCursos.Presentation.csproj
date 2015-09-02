@@ -244,29 +244,29 @@
     <Content Include="Service References\CursoServiceRemoto\AcmeCursos.Presentation.CursoServiceRemoto.CursoDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\CursoServiceRemoto\CursoService.disco" />
     <None Include="Service References\CursoServiceRemoto\configuration91.svcinfo" />
     <None Include="Service References\CursoServiceRemoto\configuration.svcinfo" />
+    <None Include="Service References\CursoServiceRemoto\CursoService1.wsdl" />
+    <None Include="Service References\CursoServiceRemoto\CursoService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CursoServiceRemoto\CursoService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CursoServiceRemoto\CursoService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CursoServiceRemoto\CursoService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CursoServiceRemoto\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\CursoServiceRemoto\CursoService1.disco" />
     <Content Include="Service References\EstudanteServiceRemoto\AcmeCursos.Presentation.EstudanteServiceRemoto.EstudanteDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\CursoServiceRemoto\CursoService.wsdl" />
-    <None Include="Service References\CursoServiceRemoto\CursoService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CursoServiceRemoto\CursoService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CursoServiceRemoto\CursoService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CursoServiceRemoto\CursoService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\EstudanteServiceRemoto\configuration91.svcinfo" />
     <None Include="Service References\EstudanteServiceRemoto\configuration.svcinfo" />
     <None Include="Service References\EstudanteServiceRemoto\EstudanteService.wsdl" />
